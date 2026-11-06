@@ -1,0 +1,41 @@
+backend:
+  name: github
+  repo: hum-lokalet/hum-lokalet.github.io
+  branch: main
+
+# Hvor billeder uploades til
+media_folder: "img/uploads"
+public_folder: "/img/uploads"
+
+collections:
+  - name: "indhold"
+    label: "Sideindhold"
+    files:
+      - file: "content/data.json"
+        label: "Lokalets Indstillinger & Referater"
+        name: "data"
+        fields:
+          - label: "Vigtig meddelelse (Gul boks)"
+            name: "notice"
+            widget: "text"
+
+          - label: "Booking URL (Google Appointments)"
+            name: "booking_url"
+            widget: "string"
+
+          - label: "Møder & Referater"
+            name: "referater"
+            widget: "list"
+            summary: "{{fields.date}} - {{fields.type}}"
+            fields:
+              - { label: "Dato", name: "date", widget: "string" }
+              - { label: "Mødetype", name: "type", widget: "string" }
+              - { label: "Væsentligste punkter", name: "summary", widget: "string" }
+              - { label: "Link til Referat (Google Doc URL)", name: "url", widget: "string" }
+
+          - label: "Lokalegalleri (Fotos)"
+            name: "gallery"
+            widget: "list"
+            fields:
+              - { label: "Billede", name: "image", widget: "image" }
+              - { label: "Billedtekst", name: "caption", widget: "string" }
