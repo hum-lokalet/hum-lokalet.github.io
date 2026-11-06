@@ -1,0 +1,46 @@
+{
+  "notice": "Faste tildelinger for efterårssemesteret 2026: Lokalet er i de faste aftentimer mandag–torsdag allokeret til faste afdelingsmøder for faglige studenterforeninger. Ledige tidsrum, weekender samt ad hoc-ønsker koordineres på det månedlige brugermøde eller via formularen.",
+  "booking_url": "https://calendar.google.com",
+  "referater": [
+    {
+      "date": "02.11.2026",
+      "type": "Ordinært brugermøde",
+      "summary": "Driftsstatus, koordinering af ad hoc-forespørgsler, forberedelse til blok 2",
+      "url": "https://docs.google.com"
+    },
+    {
+      "date": "05.10.2026",
+      "type": "Ordinært brugermøde",
+      "summary": "Gennemgang af inventar, justering af rengøringsrutiner, AV-tilslutning",
+      "url": "https://docs.google.com"
+    },
+    {
+      "date": "07.09.2026",
+      "type": "Semesterkoordinering",
+      "summary": "Fordeling af faste aftentider (man–tor 18–20) for efterårssemesteret 2026",
+      "url": "https://docs.google.com"
+    },
+    {
+      "date": "17.08.2026",
+      "type": "Planlægningsmøde",
+      "summary": "Klargøring forud for studiestart, opfyldning af basismaterialer",
+      "url": "https://docs.google.com"
+    },
+    {
+      "date": "03.06.2026",
+      "type": "Konstituerende brugermøde",
+      "summary": "Etablering af fælles brugerudvalg, koordinering med Campus Service",
+      "url": "https://docs.google.com"
+    }
+  ],
+  "gallery": [
+    {
+      "image": "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=600&q=80",
+      "caption": "Mødelokalet med fleksibel bordopstilling til oplæg og udvalgsmøder."
+    },
+    {
+      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
+      "caption": "Arbejdsborde og opbevaring for tilknyttede foreningsmaterialer."
+    }
+  ]
+}
