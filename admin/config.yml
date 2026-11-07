@@ -23,19 +23,21 @@ collections:
             name: "booking_url"
             widget: "string"
 
+          - label: "Kontakt e-mail"
+            name: "contact_email"
+            widget: "string"
+
+          - label: "Mødetidspunkt"
+            name: "meeting_time"
+            widget: "string"
+
           - label: "Møder & Referater"
             name: "referater"
             widget: "list"
             summary: "{{fields.date}} - {{fields.type}}"
             fields:
               - { label: "Dato", name: "date", widget: "string" }
+              - { label: "Tidspunkt", name: "time", widget: "string" }
               - { label: "Mødetype", name: "type", widget: "string" }
               - { label: "Væsentligste punkter", name: "summary", widget: "string" }
-              - { label: "Link til Referat (Google Doc URL)", name: "url", widget: "string" }
-
-          - label: "Lokalegalleri (Fotos)"
-            name: "gallery"
-            widget: "list"
-            fields:
-              - { label: "Billede", name: "image", widget: "image" }
-              - { label: "Billedtekst", name: "caption", widget: "string" }
+              - { label: "Link til referat (PDF-sti)", name: "url", widget: "string" }

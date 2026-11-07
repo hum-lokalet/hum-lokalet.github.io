@@ -2,460 +2,94 @@
 <html lang="da">
 <head>
   <meta charset="UTF-8">
+  <title>HUM-lokalet · Bygning 11A-1-05 · Søndre Campus (KUA)</title>
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>HUM-lokaleudvalget | Søndre Campus (KUA)</title>
-  <style>
-    :root {
-      --ku-blue: #194a8d;
-      --ku-dark: #112233;
-      --bg-light: #f7f9fa;
-      --surface: #ffffff;
-      --border: #dcdfe3;
-      --text-main: #22252a;
-      --text-muted: #59636e;
-      --notice-bg: #fdfae5;
-      --notice-border: #c99700;
-    }
-
-    * { box-sizing: border-box; margin: 0; padding: 0; }
-    html { scroll-behavior: smooth; }
-    body {
-      font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif;
-      background-color: var(--bg-light);
-      color: var(--text-main);
-      line-height: 1.6;
-    }
-
-    /* HEADER & NAV */
-    header {
-      background: var(--surface);
-      border-bottom: 3px solid var(--ku-blue);
-      position: sticky;
-      top: 0;
-      z-index: 100;
-    }
-    .header-inner {
-      max-width: 960px;
-      margin: 0 auto;
-      padding: 1rem;
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      flex-wrap: wrap;
-      gap: 1rem;
-    }
-    .brand h1 {
-      font-size: 1.25rem;
-      color: var(--ku-blue);
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-      font-weight: 800;
-    }
-    .brand p {
-      font-size: 0.8rem;
-      color: var(--text-muted);
-    }
-    nav {
-      display: flex;
-      gap: 0.5rem;
-      flex-wrap: wrap;
-    }
-    nav a {
-      font-size: 0.85rem;
-      color: var(--ku-dark);
-      text-decoration: none;
-      font-weight: 600;
-      padding: 0.35rem 0.65rem;
-      border-radius: 4px;
-      transition: background 0.15s ease;
-    }
-    nav a:hover {
-      background: #eef3f8;
-      color: var(--ku-blue);
-    }
-
-    /* CONTAINER & CARDS */
-    main {
-      max-width: 960px;
-      margin: 2rem auto;
-      padding: 0 1rem;
-      display: grid;
-      grid-gap: 2rem;
-    }
-    .card {
-      background: var(--surface);
-      border: 1px solid var(--border);
-      border-radius: 6px;
-      padding: 1.75rem;
-    }
-    h2 {
-      font-size: 1.2rem;
-      color: var(--ku-dark);
-      margin-bottom: 0.85rem;
-      border-bottom: 1px solid var(--border);
-      padding-bottom: 0.4rem;
-    }
-    h3 {
-      font-size: 1rem;
-      color: var(--ku-blue);
-      margin: 1.25rem 0 0.5rem;
-    }
-    p { margin-bottom: 0.85rem; font-size: 0.95rem; }
-    ul { margin: 0.5rem 0 1rem 1.25rem; font-size: 0.95rem; }
-    li { margin-bottom: 0.4rem; }
-
-    /* NOTICE BOX */
-    .notice-box {
-      background: var(--notice-bg);
-      border-left: 4px solid var(--notice-border);
-      padding: 0.85rem 1rem;
-      font-size: 0.9rem;
-      margin: 1rem 0;
-    }
-
-    /* SPECS GRID */
-    .specs-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
-      gap: 1rem;
-      margin: 1rem 0;
-    }
-    .spec-item {
-      background: #f8fafc;
-      border: 1px solid var(--border);
-      padding: 0.75rem 1rem;
-      border-radius: 4px;
-    }
-    .spec-item strong {
-      display: block;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      text-transform: uppercase;
-    }
-    .spec-item span {
-      font-size: 1rem;
-      font-weight: 600;
-      color: var(--ku-dark);
-    }
-
-    /* GALLERI */
-    .gallery-grid {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
-      gap: 1rem;
-      margin-top: 1rem;
-    }
-    .gallery-item {
-      border: 1px solid var(--border);
-      border-radius: 4px;
-      overflow: hidden;
-      background: #edf2f7;
-    }
-    .gallery-item img {
-      width: 100%;
-      height: 190px;
-      object-fit: cover;
-      display: block;
-    }
-    .gallery-item .caption {
-      padding: 0.5rem 0.75rem;
-      font-size: 0.8rem;
-      color: var(--text-muted);
-      background: var(--surface);
-      border-top: 1px solid var(--border);
-    }
-
-    /* KALENDER */
-    .calendar-container {
-      position: relative;
-      padding-bottom: 65%;
-      height: 0;
-      overflow: hidden;
-      border-radius: 4px;
-      border: 1px solid var(--border);
-      margin-top: 1.25rem;
-    }
-    .calendar-container iframe {
-      position: absolute;
-      top: 0; left: 0; width: 100%; height: 100%; border: 0;
-    }
-
-    /* REFERATTABEL */
-    .table-responsive {
-      overflow-x: auto;
-      margin-top: 1rem;
-    }
-    .meeting-table {
-      width: 100%;
-      border-collapse: collapse;
-      font-size: 0.9rem;
-      text-align: left;
-    }
-    .meeting-table th, .meeting-table td {
-      border: 1px solid var(--border);
-      padding: 0.7rem 0.85rem;
-    }
-    .meeting-table th {
-      background: #f1f4f8;
-      color: var(--ku-dark);
-      font-weight: 700;
-    }
-    .meeting-table tr:hover {
-      background: #fafbfc;
-    }
-
-    /* KNAPPER */
-    .btn {
-      display: inline-block;
-      background: var(--ku-blue);
-      color: #fff;
-      padding: 0.75rem 1.25rem;
-      text-decoration: none;
-      border-radius: 4px;
-      font-weight: 600;
-      font-size: 0.95rem;
-      transition: background 0.15s ease;
-    }
-    .btn:hover { background: #13386b; }
-
-    footer {
-      max-width: 960px;
-      margin: 3rem auto 2rem;
-      padding: 1.5rem 1rem;
-      text-align: center;
-      font-size: 0.85rem;
-      color: var(--text-muted);
-      border-top: 1px solid var(--border);
-    }
-    footer a {
-      color: var(--text-muted);
-      text-decoration: none;
-    }
-    footer a:hover {
-      text-decoration: underline;
-    }
-  </style>
+  <link rel="stylesheet" href="/css/style.css">
 </head>
 <body>
 
   <header>
     <div class="header-inner">
-      <div class="brand">
-        <h1>HUM-lokaleudvalget</h1>
-        <p>Brugerråd for studenter- og foreningsaktiviteter · Søndre Campus (KUA)</p>
-      </div>
-      <nav>
-        <a href="#om">Om lokalet</a>
-        <a href="#kalender">Kalender & Booking</a>
-        <a href="#reglement">Husorden</a>
-        <a href="#referater">Møder & Referater</a>
-        <a href="#faq">FAQ</a>
-      </nav>
+      <h1>HUM-lokalet</h1>
+      <p class="tagline">Fælles studenter- og foreningslokale i Bygning 11A (lokale 11A-1-05) på KUA</p>
     </div>
+    <nav>
+      <a href="/" class="active">Forside</a>
+      <a href="/om/">Om lokalet</a>
+      <a href="/booking/">Booking & Tider</a>
+      <a href="/husorden/">Husorden</a>
+      <a href="/moeder/">Møder & Referater</a>
+      <a href="/ressourcer/">Links & Tips</a>
+      <a href="/kontakt/">Kontakt & Adgang</a>
+    </nav>
   </header>
 
   <main>
-    <!-- OM LOKALET & FACILITETER -->
-    <section id="om" class="card">
-      <h2>Om HUM-lokalet & Faciliteter</h2>
-      <p>
-        HUM-lokalet er et dedikeret fælleslokale på Søndre Campus, forbeholdt aktive studenterforeninger, faggrupper og studenterpolitiske aktiviteter på Det Humanistiske Fakultet. Lokalet administreres i det daglige af et åbent brugerråd (HUM-lokaleudvalget), som varetager praktisk koordinering, oprydning, kontakt til Campus Service samt en transparent fordeling af tider.
-      </p>
+    <!-- Gul driftsboks til hverdagsbeskeder -->
+    <div class="notice-box">
+      <h3>Driftsstatus for efterårssemesteret 2026:</h3>
+      <p><strong>Faste aftener:</strong> Mandag til torsdag kl. 18.00–20.00 er lokalet optaget af faste foreningsmøder (fordelt på semestermødet). Alt andet tid kan bookes frit ad hoc.</p>
+      <p><strong>Køleskabet:</strong> Det er desværre gået i stykker igen... Vi har meldt det til driften, og der arbejdes på en løsning, men lad være med at stille mælk eller mad derind lige nu!</p>
+    </div>
 
-      <div class="specs-grid">
-        <div class="spec-item">
-          <strong>Kapacitet</strong>
-          <span>Op til 35 siddepladser</span>
-        </div>
-        <div class="spec-item">
-          <strong>AV & Udstyr</strong>
-          <span>Præsentationsskærm, HDMI</span>
-        </div>
-        <div class="spec-item">
-          <strong>Møblering</strong>
-          <span>Fleksible borde, klapstole</span>
-        </div>
-        <div class="spec-item">
-          <strong>Faciliteter</strong>
-          <span>Whiteboard, kaffestation</span>
-        </div>
+    <section>
+      <h2>Hvad er HUM-lokalet?</h2>
+      <p>Kort sagt: Det er et fælles forenings- og mødelokale for aktive studerende, faggrupper og studenterforeninger på Det Humanistiske Fakultet. Lokalet drives 100% frivilligt af os studerende igennem et åbent brugerråd (HUM-lokaleudvalget).</p>
+      <p>Her kan din forening holde ugentlige møder, I kan lave bannere, holde læsegruppe inden eksamen eller bare brygge en kande kaffe og ordne dagsordener. Vi prøver at holde bureaukratiet nede på et absolut minimum, så længe alle rydder op efter sig selv og overholder de få, faste regler vi har aftalt.</p>
+    </section>
+
+    <!-- Billede fra lokalet -->
+    <figure class="featured-image">
+      <img src="/img/uploads/img02.jpg" alt="Arbejdsdag fra øverst til nederst.">
+      <figcaption>Arbejdsdag fra øverst til nederst.</figcaption>
+    </figure>
+
+    <section class="boxes-grid">
+      <div class="box">
+        <h3>Pladser & Møbler</h3>
+        <p>Der er ca. 20 siddepladser med borde og klapstole der kan flyttes rundt. Derudover to faste skriveborde (som folk bedes holde ryddet, så andre kan sidde der!).</p>
       </div>
-
-      <h3>Billeder af lokalet</h3>
-      <div class="gallery-grid" id="gallery-grid">
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=600&q=80" alt="Mødelokale opstilling">
-          <div class="caption">Mødelokalet med fleksibel bordopstilling til oplæg og udvalgsmøder.</div>
-        </div>
-        <div class="gallery-item">
-          <img src="https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80" alt="Fællesareal">
-          <div class="caption">Arbejdsborde og opbevaring for tilknyttede foreningsmaterialer.</div>
-        </div>
+      <div class="box">
+        <h3>Kaffe & Te</h3>
+        <p>2 kaffemaskiner og store termokander. Fælles kopper i skabet – men husk at vaske op efter dig selv, der er ingen rengøringsdame til kopperne.</p>
+      </div>
+      <div class="box">
+        <h3>Skærm & Tavle</h3>
+        <p>Præsentationsskærm med HDMI-stik til bærbar, samt et stort whiteboard på væggen (husk lige at efterlade et hjørne til faste beskeder og ugeplanen).</p>
+      </div>
+      <div class="box">
+        <h3>Skabsplads & Depot</h3>
+        <p>10 hylde- og skuffemeter. Noget er reserveret fast til HUM-rådet, og resten fordeles mellem aktive foreninger ved hver semesterstart.</p>
       </div>
     </section>
 
-    <!-- KALENDER OG BOOKING -->
-    <section id="kalender" class="card">
-      <h2>Lokalekalender & Tidsfordeling</h2>
-      <p>
-        Oversigt over bekræftede aktiviteter, faste foreningsmøder og rengøringstilsyn. Lokalet er i efterårssemesteret 2026 allokeret til faste afdelingsmøder for faglige studenterforeninger mandag–torsdag i tidsrummet 18.00–20.00 jf. vedtaget semesterplan.
-      </p>
+    <!-- Konkret Google Kalender direkte på forsiden -->
+    <section class="calendar-section">
+      <h2>Lokalekalender</h2>
+      <p>Her kan du se hvad der er booket i HUM-lokalet lige nu (faste aftentildelinger mandag–torsdag kl. 18–20 samt godkendte ad hoc-aktiviteter):</p>
       
-      <div class="notice-box" id="notice-box">
-        <strong id="notice-header">Faste tildelinger for efterårssemesteret 2026:</strong> 
-        <span id="notice-text">Lokalet er i de faste aftentimer mandag–torsdag allokeret til faste afdelingsmøder for faglige studenterforeninger. Ledige tidsrum, weekender samt ad hoc-ønsker koordineres på det månedlige brugermøde eller via formularen.</span>
+      <div class="calendar-wrapper">
+        <iframe src="https://calendar.google.com/calendar/embed?src=humlokalet.kua%40gmail.com&ctz=Europe%2FCopenhagen" style="border: 0" width="100%" height="600" frameborder="0" scrolling="no"></iframe>
       </div>
-
-      <div style="margin: 1.25rem 0;">
-        <a href="https://calendar.google.com" id="booking-btn" target="_blank" rel="noopener" class="btn">
-          Åbn reservationsformular for ad hoc-brug →
-        </a>
-      </div>
-
-      <div class="calendar-container">
-        <iframe id="calendar-iframe" src="https://calendar.google.com/calendar/embed?src=humlokalet.kua%40gmail.com&ctz=Europe%2FCopenhagen" style="border: 0" width="800" height="600" frameborder="0" scrolling="no"></iframe>
-      </div>
-    </section>
-
-    <!-- HUSORDEN OG REGLEMENT -->
-    <section id="reglement" class="card">
-      <h2>Husorden & Retningslinjer</h2>
-      <p>For at sikre et ordentligt studiemiljø og efterleve Københavns Universitets campusreglement gælder følgende ufravigelige retningslinjer for enhver benyttelse:</p>
-      <ul>
-        <li><strong>Rengøringspligt:</strong> Enhver brugergruppe rydder op, fejer efter behov, tørrer borde af og tømmer affaldsspande ud i affaldscontainerne på gangen efter hvert møde.</li>
-        <li><strong>Brandsikkerhed:</strong> Lokalet må under ingen omstændigheder rumme mere end 35 personer samtidig. Døre og flugtveje må ikke blokeres af borde, stole eller udstyr.</li>
-        <li><strong>Ro og hensyn:</strong> Der skal udvises behørigt hensyn til omkringliggende undervisnings- og læsepladser. Efter kl. 22.00 skal der være fuldstændig ro i lokalet.</li>
-        <li><strong>Alkoholfrie hverdage:</strong> Lokalet fungerer som arbejds- og mødelokale. Der må ikke udskænkes eller indtages alkohol i lokalet uden forudgående dispensation jf. fakultetets festregulativ.</li>
-        <li><strong>Nøgler & Adgang:</strong> Lokalet må ikke efterlades ulåst. Sidste brugergruppe sikrer, at samtlige vinduer er haspet, lyset slukket og døren smækket.</li>
-      </ul>
-    </section>
-
-    <!-- MØDER OG REFERATER -->
-    <section id="referater" class="card">
-      <h2>Møder & Referatarkiv</h2>
-      <p>
-        HUM-lokaleudvalget afholder ordinært koordinationsmøde <strong>1. mandag i hver måned kl. 17.00–18.00</strong> i HUM-lokalet. Møderne er åbne for alle foreninger og aktive brugere på fakultetet.
-      </p>
-
-      <div class="table-responsive">
-        <table class="meeting-table">
-          <thead>
-            <tr>
-              <th>Dato</th>
-              <th>Type</th>
-              <th>Væsentligste punkter</th>
-              <th>Referat</th>
-            </tr>
-          </thead>
-          <tbody id="referater-body">
-            <tr>
-              <td><strong>02.11.2026</strong></td>
-              <td>Ordinært brugermøde</td>
-              <td>Driftsstatus, koordinering af ad hoc-forespørgsler, forberedelse til blok 2</td>
-              <td><a href="https://docs.google.com" target="_blank" rel="noopener" style="color: var(--ku-blue); font-weight: 600;">Åbn referat ↗</a></td>
-            </tr>
-            <tr>
-              <td><strong>05.10.2026</strong></td>
-              <td>Ordinært brugermøde</td>
-              <td>Gennemgang af inventar, justering af rengøringsrutiner, AV-tilslutning</td>
-              <td><a href="https://docs.google.com" target="_blank" rel="noopener" style="color: var(--ku-blue); font-weight: 600;">Åbn referat ↗</a></td>
-            </tr>
-            <tr>
-              <td><strong>07.09.2026</strong></td>
-              <td>Semesterkoordinering</td>
-              <td>Fordeling af faste aftentider (man–tor 18–20) for efterårssemesteret 2026</td>
-              <td><a href="https://docs.google.com" target="_blank" rel="noopener" style="color: var(--ku-blue); font-weight: 600;">Åbn referat ↗</a></td>
-            </tr>
-            <tr>
-              <td><strong>17.08.2026</strong></td>
-              <td>Planlægningsmøde</td>
-              <td>Klargøring forud for studiestart, opfyldning af basismaterialer</td>
-              <td><a href="https://docs.google.com" target="_blank" rel="noopener" style="color: var(--ku-blue); font-weight: 600;">Åbn referat ↗</a></td>
-            </tr>
-            <tr>
-              <td><strong>03.06.2026</strong></td>
-              <td>Konstituerende brugermøde</td>
-              <td>Etablering af fælles brugerudvalg, koordinering med Campus Service</td>
-              <td><a href="https://docs.google.com" target="_blank" rel="noopener" style="color: var(--ku-blue); font-weight: 600;">Åbn referat ↗</a></td>
-            </tr>
-          </tbody>
-        </table>
-      </div>
-      <p style="font-size: 0.85rem; color: var(--text-muted); margin-top: 0.85rem;">
-        *Ønsker din forening punkter på dagsordenen til det kommende koordinationsmøde, bedes disse sendt pr. e-mail senest 3 dage forinden.
-      </p>
-    </section>
-
-    <!-- FAQ -->
-    <section id="faq" class="card">
-      <h2>Ofte stillede spørgsmål (FAQ)</h2>
       
-      <h3>Hvem kan benytte HUM-lokalet?</h3>
-      <p>Alle registrerede studenterforeninger, faggrupper og studenterpolitiske organisationer med virke på Det Humanistiske Fakultet på Københavns Universitet kan benytte lokalet til foreningsrelaterede møder og aktiviteter.</p>
+      <p style="margin-top: 0.75rem;">
+        <a href="https://calendar.google.com/calendar/u/0?cid=aHVtbG9rYWxldC5rdWFAZ21haWwuY29t" target="_blank" rel="noopener" class="btn">Åbn kalenderen i Google Calendar / Tilføj →</a>
+        <a href="/booking/" class="btn" style="background: var(--dark-blue); margin-left: 0.5rem;">Læs regler & book ad hoc →</a>
+      </p>
+    </section>
 
-      <h3>Koster det noget at låne lokalet?</h3>
-      <p>Nej. Lokalet stilles vederlagsfrit til rådighed for det aktive studiemiljø på KUA. Fællesudgifter til rengøringsartikler dækkes af de faste brugerforeninger.</p>
-
-      <h3>Hvordan tildeles faste ugentlige tider?</h3>
-      <p>Faste tider for et semester allokeres på udvalgets semestermøder (primo september og primo februar). Tildeling sker efter et aktivitets- og behovsprincip for aktive foreninger med dokumenteret mødeaktivitet.</p>
-
-      <h3>Hvem kontakter man ved spørgsmål eller defekt udstyr?</h3>
-      <p>Henvendelser vedrørende drift, inventar eller praktisk koordinering rettes direkte til udvalget via e-mail: <a href="mailto:humlokalet.kua@gmail.com" style="color: var(--ku-blue);">humlokalet.kua@gmail.com</a>.</p>
+    <section class="meeting-callout">
+      <h3>Vær med til næste mandagsmøde</h3>
+      <p>Vi mødes den <strong>første mandag i hver måned fra kl. 16.30 til 17.30</strong> i lokalet (11A-1-05). Her vender vi alt fra skuffeplads og kaffekasse til nye ønsker og ad hoc-tider.</p>
+      <p>Næste gang er <strong>mandag d. 7. december 2026 kl. 16.30</strong>. Alle studerende på HUM er velkomne til at kigge forbi.</p>
+      <p><a href="/moeder/">Se dagsorden og gamle referater her →</a></p>
     </section>
   </main>
 
   <footer>
-    <p>HUM-lokaleudvalget · Søndre Campus, Københavns Universitet · Kontakt: humlokalet.kua@gmail.com</p>
-    <p style="margin-top: 0.35rem;"><a href="./admin/">CMS Administration</a></p>
+    <p>HUM-lokalet · Bygning 11A, lokale 11A-1-05, Søndre Campus (KUA) · Mail: <a href="mailto:humlokalet.kua@gmail.com">humlokalet.kua@gmail.com</a></p>
+    <p><small>Lokalet administreres af de aktive foreninger efter aftale med Campus Service og Universitetslovens § 22.</small></p>
   </footer>
-
-  <script>
-    // Henter data fra content/data.json administreret via Sveltia CMS
-    fetch('./content/data.json')
-      .then(response => {
-        if (!response.ok) throw new Error('Datafil ikke tilgængelig');
-        return response.json();
-      })
-      .then(data => {
-        // 1. Vigtig meddelelse
-        if (data.notice && document.getElementById('notice-text')) {
-          document.getElementById('notice-text').innerText = data.notice;
-        }
-
-        // 2. Bookinglink
-        if (data.booking_url && document.getElementById('booking-btn')) {
-          document.getElementById('booking-btn').href = data.booking_url;
-        }
-
-        // 3. Referatliste
-        if (data.referater && data.referater.length > 0 && document.getElementById('referater-body')) {
-          const tbody = document.getElementById('referater-body');
-          tbody.innerHTML = data.referater.map(r => `
-            <tr>
-              <td><strong>${r.date}</strong></td>
-              <td>${r.type}</td>
-              <td>${r.summary}</td>
-              <td><a href="${r.url}" target="_blank" rel="noopener" style="color: var(--ku-blue); font-weight: 600;">Åbn referat ↗</a></td>
-            </tr>
-          `).join('');
-        }
-
-        // 4. Billedgalleri
-        if (data.gallery && data.gallery.length > 0 && document.getElementById('gallery-grid')) {
-          const gallery = document.getElementById('gallery-grid');
-          gallery.innerHTML = data.gallery.map(item => `
-            <div class="gallery-item">
-              <img src="${item.image}" alt="${item.caption || 'Foto af HUM-lokalet'}">
-              <div class="caption">${item.caption || ''}</div>
-            </div>
-          `).join('');
-        }
-      })
-      .catch(err => {
-        // Kører fejlfrit videre med det indbyggede statiske HTML-indhold
-        console.log('Viser statisk fallback-indhold:', err);
-      });
-  </script>
 
 </body>
 </html>

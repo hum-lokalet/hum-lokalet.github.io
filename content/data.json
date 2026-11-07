@@ -1,46 +1,71 @@
 {
-  "notice": "Faste tildelinger for efterårssemesteret 2026: Lokalet er i de faste aftentimer mandag–torsdag allokeret til faste afdelingsmøder for faglige studenterforeninger. Ledige tidsrum, weekender samt ad hoc-ønsker koordineres på det månedlige brugermøde eller via formularen.",
-  "booking_url": "https://calendar.google.com",
+  "notice": "Faste aftentider efterår 2026: Mandag–torsdag kl. 18–20 er tildelt faste foreninger (herunder Marxistiske Studerende). Resten af tiden kan bookes ad hoc. OBS: Køleskabet er p.t. i stykker!",
+  "booking_url": "https://calendar.google.com/calendar/u/0?cid=aHVtbG9rYWxldC5rdWFAZ21haWwuY29t",
+  "contact_email": "humlokalet.kua@gmail.com",
+  "location": "Bygning 11A, lokale 11A-1-05, Søndre Campus (KUA)",
+  "specifications": {
+    "location": "Bygning 11A-1-05",
+    "capacity": 20,
+    "desks": 2,
+    "coffee_machines": 2,
+    "fridge_status": "Defekt (venter på reparation)",
+    "printer_status": "Tvilsom stand - brug print.ku.dk i stedet",
+    "shelf_meters": 10
+  },
+  "meeting_time": "Første mandag i måneden kl. 16.30-17.30 i lokalet (11A-1-05)",
   "referater": [
     {
       "date": "02.11.2026",
-      "type": "Ordinært brugermøde",
-      "summary": "Driftsstatus, koordinering af ad hoc-forespørgsler, forberedelse til blok 2",
-      "url": "https://docs.google.com"
+      "time": "16.30–17.30",
+      "type": "Ordinært månedsmøde",
+      "summary": "Midtvejsstatus for semestret, håndtering af eksamenslæsegrupper til januar, løse planer for inventar og kaffekasse i 2027.",
+      "url": "./referater/referat-2026-11-02.pdf"
     },
     {
       "date": "05.10.2026",
-      "type": "Ordinært brugermøde",
-      "summary": "Gennemgang af inventar, justering af rengøringsrutiner, AV-tilslutning",
-      "url": "https://docs.google.com"
+      "time": "16.30–17.30",
+      "type": "Ordinært månedsmøde",
+      "summary": "Driftserfaringer med aftentiderne, AV-skærm (indkøb af USB-C adapter godkendt) og indskærpelse af rengøring ved kaffemaskinen.",
+      "url": "./referater/referat-2026-10-05.pdf"
     },
     {
       "date": "07.09.2026",
+      "time": "16.30–17.30",
       "type": "Semesterkoordinering",
-      "summary": "Fordeling af faste aftentider (man–tor 18–20) for efterårssemesteret 2026",
-      "url": "https://docs.google.com"
+      "summary": "Endelig tildeling af faste aftentider (man-tor 18-20 for efterårssemestret til faglige foreninger, herunder Marxistiske Studerende).",
+      "url": "./referater/referat-2026-09-07.pdf"
     },
     {
-      "date": "17.08.2026",
-      "type": "Planlægningsmøde",
-      "summary": "Klargøring forud for studiestart, opfyldning af basismaterialer",
-      "url": "https://docs.google.com"
+      "date": "31.08.2026",
+      "time": "16.30–17.30",
+      "type": "Planlægning før studiestart",
+      "summary": "Sidste mandag i august: Inventartjek, kaffe og kludekasse fyldt op, nøglebrikstatus tjekket hos Betjentstuen.",
+      "url": "./referater/referat-2026-08-31.pdf"
     },
     {
-      "date": "03.06.2026",
-      "type": "Konstituerende brugermøde",
-      "summary": "Etablering af fælles brugerudvalg, koordinering med Campus Service",
-      "url": "https://docs.google.com"
+      "date": "Maj 2026",
+      "time": "16.30–17.30",
+      "type": "Stiftende brugermøde",
+      "summary": "Etablering af lokaleudvalget som samlende organ, kontakt til Campus Service, godkendelse af husorden og brandloft på 35 pers.",
+      "url": "./referater/referat-2026-05.pdf"
     }
   ],
   "gallery": [
     {
-      "image": "https://images.unsplash.com/photo-1517502884422-41eaead166d4?auto=format&fit=crop&w=600&q=80",
-      "caption": "Mødelokalet med fleksibel bordopstilling til oplæg og udvalgsmøder."
+      "image": "/img/uploads/img03-hmmm.jpg",
+      "caption": "HUMMM: Fællesmøde, bannerproduktion og foreningsliv i HUM-lokalet (11A-1-05)."
     },
     {
-      "image": "https://images.unsplash.com/photo-1497366216548-37526070297c?auto=format&fit=crop&w=600&q=80",
-      "caption": "Arbejdsborde og opbevaring for tilknyttede foreningsmaterialer."
+      "image": "/img/uploads/img02.jpg",
+      "caption": "Arbejdsdag fra øverst til nederst."
+    },
+    {
+      "image": "/img/uploads/img01.jpg",
+      "caption": "Arbejdspladser og opslagstavle i lokalet."
+    },
+    {
+      "image": "/img/uploads/img04.jpg",
+      "caption": "Depot, materialer og fleksible møbler."
     }
   ]
 }
