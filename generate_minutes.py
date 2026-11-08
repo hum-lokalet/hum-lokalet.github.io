@@ -40,7 +40,7 @@ class NumberedCanvas(canvas.Canvas):
         self.setStrokeColor(colors.HexColor("#d5ddf8"))
         self.setLineWidth(0.5)
         self.line(54, 45, 541, 45)
-        self.drawString(54, 34, "HUM-lokalet · Bygn. 11A-1-05 · Kontakt: humlokalet.kua@gmail.com · Universitetslovens § 22")
+        self.drawString(54, 34, "HUM-lokalet · Bygn. 11A-1-05 · Kontakt: hum.lokaleudvalg@gmail.com · Universitetslovens § 22")
         self.drawRightString(541, 34, f"Side {self._pageNumber} af {page_count}")
         self.restoreState()
 
@@ -243,7 +243,7 @@ MEETINGS = [
                     "Vi har talt med driftsfolkene og Betjentstuen på Søndre Campus. Aftalen er, at vi selv står for den indvendige orden, rengøring og opfyldning af basale ting, mens de koder studiekort og hjælper ved tekniske nedbrud.",
                     "Nøgler/adgangsbrikker styres via godkendte navnelister fra de aktive foreninger."
                 ],
-                "beslutning": "Udvalget opretter en fællesmail (humlokalet.kua@gmail.com) som fast kontaktflade til Campus Service."
+                "beslutning": "Udvalget opretter en fællesmail (hum.lokaleudvalg@gmail.com) som fast kontaktflade til Campus Service."
             },
             {
                 "titel": "§4. Godkendelse af husorden og brandloft",
@@ -363,7 +363,7 @@ MEETINGS = [
             {
                 "titel": "§5. Lancering af online kalender og bookingmail",
                 "punkter": [
-                    "Kalenderen over bekræftede aktiviteter gøres offentlig tilgængelig på websitet. Ad hoc-reservationer sendes til humlokalet.kua@gmail.com senest 48 timer i forvejen."
+                    "Kalenderen over bekræftede aktiviteter gøres offentlig tilgængelig på websitet. Ad hoc-reservationer sendes til hum.lokaleudvalg@gmail.com senest 48 timer i forvejen."
                 ],
                 "beslutning": "Bookingproceduren er godkendt og i drift."
             },
