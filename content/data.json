@@ -8,8 +8,8 @@
     "capacity": 15,
     "desks": 2,
     "coffee_machines": 2,
-    "fridge_status": "Defekt (venter på reparation)",
-    "printer_status": "Tvilsom stand - brug print.ku.dk i stedet",
+    "fridge_status": "Defekt (indsamling gennemført, afhentes nov)",
+    "printer_status": "Tvivlsom stand - brug print.ku.dk i stedet",
     "shelf_meters": 10
   },
   "meeting_time": "Første mandag i måneden kl. 16.30-17.30 i lokalet (11A-1-05)",
@@ -18,36 +18,43 @@
       "date": "02.11.2026",
       "time": "16.30–17.30",
       "type": "Ordinært månedsmøde",
-      "summary": "Midtvejsstatus for semestret, håndtering af eksamenslæsegrupper til januar, løse planer for inventar og kaffekasse i 2027.",
-      "url": "./referater/referat-2026-11-02.pdf"
+      "summary": "Køleskabsstatus (indsamling til brugt kølefryseskab på DBA afsluttet), indkøb af sulfo/klude, bedre skiltning til 11A, godkendelse af lokallån til Teologi (fagråd) samt forberedelse af arbejdsdag i december.",
+      "url": "/referater/Mandagsm%C3%B8de%202:11%20%E2%80%93%20HUM-lokaleudvalg%20(11A-1-05).pdf"
     },
     {
       "date": "05.10.2026",
       "time": "16.30–17.30",
       "type": "Ordinært månedsmøde",
-      "summary": "Driftserfaringer med aftentiderne, AV-skærm (indkøb af USB-C adapter godkendt) og indskærpelse af rengøring ved kaffemaskinen.",
-      "url": "./referater/referat-2026-10-05.pdf"
+      "summary": "Køleskab meldt defekt hos drift/Campus Service, opvaskerotat som fast opgave for faste foreninger, vejvisningsproblemer til lokalet og plan for bedre skiltning, eftermiddagstider (KS faste møder) og HUM-minibar.",
+      "url": "/referater/Mandagsm%C3%B8de%205:10%20%E2%80%93%20HUM-lokaleudvalg%20(11A-1-05).pdf"
     },
     {
       "date": "07.09.2026",
       "time": "16.30–17.30",
-      "type": "Semesterkoordinering",
-      "summary": "Endelig tildeling af faste aftentider (man-tor 18-20 for efterårssemestret til faglige foreninger, herunder Marxistiske Studerende).",
-      "url": "./referater/referat-2026-09-07.pdf"
+      "type": "Semesterkoordinering & websitelaunch",
+      "summary": "Lancering af ny hjemmeside og online booking. Vigtigt princip: Ingen personlige kontaktoplysninger på sitet/i referater pga. doxing og chikane. Nøgleadgang via Betjentstuen og KS faste tirsdage godkendt.",
+      "url": "/referater/Mandagsm%C3%B8de%207:09%20%E2%80%93%20HUM-lokaleudvalg%20(11A-1-05).pdf"
     },
     {
       "date": "31.08.2026",
       "time": "16.30–17.30",
-      "type": "Planlægning før studiestart",
-      "summary": "Sidste mandag i august: Inventartjek, kaffe og kludekasse fyldt op, nøglebrikstatus tjekket hos Betjentstuen.",
-      "url": "./referater/referat-2026-08-31.pdf"
+      "type": "Semesterstartsmøde",
+      "summary": "Evaluering af sommerens arbejdsdag (inventartjek og rengøring), etablering af 'snart-ud-pallen' til hittegods, koncept for nyt bookingsystem og hjemmeside (Noah admin) og aftentider til Kommunistiske Studerende.",
+      "url": "/referater/Semesterstartsm%C3%B8de%20%2031:8%20%E2%80%93%20HUM-lokaleudvalg%20(11A-1-05).pdf"
     },
     {
-      "date": "Maj 2026",
+      "date": "25.05.2026",
+      "time": "16.30–17.30",
+      "type": "Første ordinære mandagsmøde",
+      "summary": "Første driftsmøde efter stiftelsen. Nøgler, brikker og faste åbningstider formelt godkendt af Campus Service. Plan for bred invitation til andre foreninger samt principper for formiddagsro og eftermiddagsmøder.",
+      "url": "/referater/Mandagsm%C3%B8de%2025:5%20%E2%80%93%20HUM-lokaleudvalg%20(11A-1-05).pdf"
+    },
+    {
+      "date": "04.05.2026",
       "time": "16.30–17.30",
       "type": "Stiftende brugermøde",
-      "summary": "Etablering af lokaleudvalget som samlende organ, kontakt til Campus Service, godkendelse af husorden og brandloft på 35 pers.",
-      "url": "./referater/referat-2026-05.pdf"
+      "summary": "Etablering af det selvstyrende og uafhængige HUM-lokaleudvalg (11A-1-05), godkendelse af brandregulativ (maks. 25 personer), første udkast til husorden, planlægning af arbejdsdag og opstart af HUM-minibar.",
+      "url": "/referater/HUM-lokaleudvalg%20(11A-1-05)%20-%20brugerm%C3%B8de%20stiftende.pdf"
     }
   ],
   "gallery": [
